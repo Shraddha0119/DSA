@@ -1,0 +1,17 @@
+// 8. Maximum subarray sum (Kadane). Input: [-2,1,-3,4,-1,2,1,-5] → 6
+
+function maxSubArray(arr) {
+    let currentSum = arr[0];
+    let maxSum = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        currentSum = Math.max(arr[i], currentSum + arr[i]);
+        maxSum = Math.max(maxSum, currentSum);
+    }
+
+    return maxSum;
+}
+
+// Example
+const arr = [-2, 1, -3, 4, -1, 2, 1, -5];
+console.log(maxSubArray(arr)); // 6
