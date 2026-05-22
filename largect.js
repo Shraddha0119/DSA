@@ -10,5 +10,4 @@ function findLargest(arr){
     }
     return largest
 }
-
 console.log(findLargest([3,7,2,9,5]));
